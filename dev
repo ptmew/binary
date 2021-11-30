@@ -1,0 +1,7 @@
+session=$1
+tmux has-session -t $session
+if [ $? != 0 ]
+then
+  tmux new-session -s $session
+fi
+tmux attach -t $session  
