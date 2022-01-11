@@ -3,3 +3,4 @@
 tmux split-window -v -p 30
 tmux split-window -h -p 50
 tmux send-keys -t 0 "vi ." Enter
+tmux rename-window ide
