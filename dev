@@ -1,7 +1,9 @@
+#!/bin/bash
 session=$1
 tmux has-session -t $session
 if [ $? != 0 ]
 then
-  tmux new-session -s $session
+    tmux new-session -s $session
+else
+    tmux attach -t $session  
 fi
-tmux attach -t $session  
