@@ -1,11 +1,11 @@
 #!/bin/bash
 #Split up the tmux window for IDE develop environment
-tmux new-window -n 'focus'
-tmux send-keys -t 0 'cd ~/Coding && vi .' Enter
-tmux select-window -t 0
+# tmux new-window -n 'focus'
+# tmux send-keys -t 0 'cd ~/Coding && vi .' Enter
+# tmux select-window -t 0
 
-tmux split-window -v -p 30
-tmux split-window -h -p 50
-tmux send-keys -t 0 "cd ~/Coding && vi ." Enter
+tmux split-window -v -p 15
+# tmux split-window -h -p 50
+tmux send-keys -t 0 "vi ." Enter
 tmux rename-window ide
 tmux select-pane -t 0
