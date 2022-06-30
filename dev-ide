@@ -1,0 +1,9 @@
+#!/bin/bash
+session=$1
+tmux has-session -t $session
+if [ $? != 0 ]
+then
+    tmux new-session -s $session \; send "ide" Enter
+else
+    tmux attach -t $session  
+fi
